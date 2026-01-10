@@ -7,12 +7,22 @@ import Image from "next/image";
 import HowWeWork from "@/components/ui/custom/HowWeWork/HowWeWork";
 import TechnologyPlatformSection from "@/components/ui/custom/TechnologyPlatformSection/TechnologyPlatformSection";
 import TeamSection from "@/components/ui/custom/TeamSection/TeamSection";
-import CallToActionSection from "@/components/ui/custom/CallToActionSection/CallToActionSection";
 import Footer from "@/components/ui/custom/Footer";
+import SmoothScroll from "@/components/ui/smooth-scroll";
 
 export default function Home() {
   return (
     <div className="pt-20">
+      <div className="fixed bottom-0 left-0 right-0 h-10 pointer-events-none z-40">
+        <div
+          className="absolute inset-0 backdrop-blur-xl"
+          style={{
+            maskImage: "linear-gradient(to top, black, transparent)",
+            WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+          }}
+        />
+      </div>
+      <SmoothScroll />
       <Hero />
       <TrustedCompanies />
       <ValueProposition />
@@ -21,7 +31,6 @@ export default function Home() {
       <HowWeWork />
       <TechnologyPlatformSection />
       <TeamSection />
-      <CallToActionSection />
       <Footer />
     </div>
   );

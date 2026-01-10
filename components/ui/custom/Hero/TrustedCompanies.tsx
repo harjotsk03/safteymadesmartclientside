@@ -1,23 +1,35 @@
-"use client"
+"use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
+import PAPALogo from "../../../../assets/papaplumbinglogo.png";
+import GFLLogo from "../../../../assets/GFL_Environmental_logo.png";
+import SecreloLogo from "../../../../assets/secreloLogoBlack.png";
+import { StaticImageData } from "next/image";
 
 export default function TrustedCompanies() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Company logos - you can replace these with actual logo images
-  const companies = [
-    { name: "TENQ", logo: "TENQ" },
-    { name: "northbyte", logo: "northbyte" },
-    { name: "liva", logo: "liva" },
-    { name: "krona", logo: "krona" },
-    { name: "velto", logo: "velto" },
-    { name: "sonar", logo: "sonar" },
-    { name: "BLOOM", logo: "BLOOM" },
-    { name: "TENQ", logo: "TENQ" },
+  const companies: { name: string; logo: StaticImageData | string }[] = [
+    { name: "GFL Environmental", logo: GFLLogo },
+    { name: "Secrelo", logo: SecreloLogo }, // Use a path string for missing images
+    { name: "PAPA Plumbing", logo: PAPALogo },
+    { name: "GFL Environmental", logo: GFLLogo },
+    { name: "Secrelo", logo: SecreloLogo },
+    { name: "PAPA Plumbing", logo: PAPALogo },
+    { name: "GFL Environmental", logo: GFLLogo },
+    { name: "Secrelo", logo: SecreloLogo },
+    { name: "PAPA Plumbing", logo: PAPALogo },
   ];
 
   // Duplicate the array for seamless infinite scroll
-  const duplicatedCompanies = [...companies, ...companies, ...companies];
+  const duplicatedCompanies = [
+    ...companies,
+    ...companies,
+    ...companies,
+    ...companies,
+    ...companies,
+  ];
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -50,10 +62,10 @@ export default function TrustedCompanies() {
   }, []);
 
   return (
-    <section className="w-full pt-16 lg:pt-24 overflow-hidden">
+    <section className="w-4/5 mx-auto pt-16 lg:pt-10 overflow-hidden">
       <div className="mb-12">
-        <h2 className="text-xl font-regular text-primary text-center">
-          Trusted by leading companies worldwide
+        <h2 className="text-base font-regular text-primary text-center">
+          Trusted by leading companies in BC
         </h2>
       </div>
 
@@ -72,20 +84,22 @@ export default function TrustedCompanies() {
               key={`${company.name}-${index}`}
               className="flex-shrink-0 flex items-center justify-center min-w-[120px] lg:min-w-[150px]"
             >
-              {/* Placeholder for company logo */}
               <div className="flex items-center justify-center">
-                <span className="text-xl lg:text-2xl font-medium text-gray-800 whitespace-nowrap">
-                  {company.logo}
-                </span>
-                {/* Replace with actual logo:
-                <Image
-                  src={`/logos/${company.logo}.png`}
-                  alt={company.name}
-                  width={150}
-                  height={40}
-                  className="opacity-60 hover:opacity-100 transition-opacity"
-                />
-                */}
+                {typeof company.logo === "string" ? (
+                  // For string paths or placeholder text
+                  <span className="text-xl lg:text-2xl font-medium text-gray-800 whitespace-nowrap">
+                    {company.logo}
+                  </span>
+                ) : (
+                  // For imported StaticImageData
+                  <Image
+                    src={company.logo}
+                    alt={company.name}
+                    width={company.name == "Secrelo" ? 50 : 100}
+                    height={40}
+                    className="opacity-60 hover:opacity-100 transition-opacity"
+                  />
+                )}
               </div>
             </div>
           ))}
