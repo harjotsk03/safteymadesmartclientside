@@ -26,15 +26,13 @@ export default function Hero() {
               Specific, Measurable, Achievable, Relevant, and Time-bound
             </p>
           </div> */}
-          <h1 className="text-5xl lg:text-7xl font-regular leading-20 tracking-tight text-primary mt-6">
-            Modern Safety Consulting. <br />{" "}
-            <span className="text-chart-1">Powered by Experience.</span>
+          <h1 className="text-5xl lg:text-7xl font-medium leading-22 tracking-tight text-primary mt-6">
+            Real Safety for <span className="text-chart-1">Real Work.</span>
           </h1>
 
-          <p className="mt-6 text-base lg:text-lg text-primary/60 w-3/4">
-            Combining 20+ years of BC work place expertise with cutting-edge
-            technology to make workplace safety simpler, smarter, and more
-            effective.
+          <p className="mt-6 text-base lg:text-xl text-primary/70 w-3/4">
+            From in-person training to digital safety systems, we help you stay
+            compliant without slowing down operations.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-14">
