@@ -35,7 +35,18 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
+);
+
+const animatedLabel = (label: React.ReactNode) => (
+  <span className="relative block overflow-hidden">
+    <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-full">
+      {label}
+    </span>
+    <span className="absolute left-0 top-0 inline-block translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0">
+      {label}
+    </span>
+  </span>
 );
 
 function Button({
@@ -49,25 +60,44 @@ function Button({
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
-  const Comp = asChild ? Slot : "button";
+  if (asChild) {
+    const child = React.Children.only(children);
+    if (!React.isValidElement(child)) {
+      throw new Error("Button asChild expects a single React element child.");
+    }
+    const el = child as React.ReactElement<{
+      children?: React.ReactNode;
+      className?: string;
+    }>;
+    const label = el.props.children;
+
+    return (
+      <Slot
+        data-slot="button"
+        data-variant={variant}
+        data-size={size}
+        className={cn(buttonVariants({ variant, size }), "group", className)}
+        {...props}
+      >
+        {React.cloneElement(el, {
+          ...el.props,
+          children: animatedLabel(label),
+        })}
+      </Slot>
+    );
+  }
 
   return (
-    <Comp
+    <button
+      type="button"
       data-slot="button"
       data-variant={variant}
       data-size={size}
       className={cn(buttonVariants({ variant, size }), "group", className)}
       {...props}
     >
-      <span className="relative block overflow-hidden">
-        <span className="inline-block transition-transform duration-500 ease-out group-hover:-translate-y-full">
-          {children}
-        </span>
-        <span className="absolute left-0 top-0 inline-block translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0">
-          {children}
-        </span>
-      </span>
-    </Comp>
+      {animatedLabel(children)}
+    </button>
   );
 }
 

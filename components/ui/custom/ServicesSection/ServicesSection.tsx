@@ -14,7 +14,7 @@ export default function ServicesSection() {
       title: "Training & Consulting",
       items: [
         "Joint Health & Safety Committee training",
-        "WHMIS 2015 certification",
+        "WHMIS certification",
         "Hazard identification & risk assessments",
         "Custom workplace-specific training",
       ],
@@ -23,7 +23,7 @@ export default function ServicesSection() {
       icon: ClipboardCheck,
       title: "On-Site Safety Support",
       items: [
-        "Mock WorkSafe inspections",
+        "Mock inspections",
         "Safety audits & gap analysis",
         "Incident investigations",
         "Real-time compliance assessments",
@@ -52,7 +52,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-accent/50 py-20 lg:py-28">
+    <section id="services" className="w-full bg-accent/50 py-20 lg:py-28">
       <div className="px-6 lg:px-40">
         {/* Header */}
         <div className="mb-14">
@@ -70,10 +70,7 @@ export default function ServicesSection() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
-                key={index}
-                className="bg-primary/2 rounded-2xl p-8"
-              >
+              <div key={index} className="bg-primary/2 rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-10 h-10 rounded-lg bg-chart-1/10 flex items-center justify-center">
                     <Icon className="w-5 h-5 text-chart-1" />

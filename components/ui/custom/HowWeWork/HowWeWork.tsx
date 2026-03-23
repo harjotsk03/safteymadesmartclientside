@@ -33,7 +33,7 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section className="w-full bg-background py-20 lg:py-28">
+    <section id="our-process" className="w-full bg-background py-20 lg:py-28">
       <div className="px-6 lg:px-40 grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Left Content */}
         <div className="lg:sticky lg:top-32 self-start">

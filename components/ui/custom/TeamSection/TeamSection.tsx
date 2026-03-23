@@ -1,4 +1,8 @@
+import * as React from "react";
+import Image from "next/image";
 import { ShieldCheck, HardHat, Cpu } from "lucide-react";
+import AndyLim from "../../../../assets/AndyLim.png";
+import SukhwantSingh from "../../../../assets/SukhwantSingh.jpeg";
 
 type Highlight = {
   index: string;
@@ -13,27 +17,27 @@ export default function TeamSection() {
       index: "01",
       title: "Former WorkSafeBC Officers",
       description:
-        "Our team includes former WorkSafeBC officers with over 20 years of combined experience conducting inspections, investigating incidents, and enforcing safety regulations across multiple industries.",
+        "Our team includes former WorkSafeBC officers with over 50 years of combined experience conducting inspections, investigating incidents, and enforcing safety regulations across multiple industries.",
       icon: ShieldCheck,
     },
     {
       index: "02",
-      title: "OHS Professional",
+      title: "OHS Professionals",
       description:
-        "An experienced occupational health and safety professional with 15+ years of hands-on experience building and implementing safety management systems for organizations of all sizes.",
+        "Our team includes experienced occupational health and safety professionals with decades of combined experience building and implementing safety systems for organizations of all sizes.",
       icon: HardHat,
     },
-    {
-      index: "03",
-      title: "Technology Specialists",
-      description:
-        "A dedicated team of engineers and product designers building intuitive, powerful digital tools specifically designed for real-world safety operations—not generic software.",
-      icon: Cpu,
-    },
+    // {
+    //   index: "03",
+    //   title: "Technology Specialists",
+    //   description:
+    //     "A dedicated team of engineers and product designers building intuitive, powerful digital tools specifically designed for real-world safety operations—not generic software.",
+    //   icon: Cpu,
+    // },
   ];
 
   return (
-    <section className="w-full bg-background py-20 lg:py-28">
+    <section id="our-team" className="w-full bg-background py-20 lg:py-28">
       <div className="px-6 w-full lg:px-40 ">
         {/* Top Layout */}
         <div className="items-end">
@@ -47,12 +51,22 @@ export default function TeamSection() {
             </h2>
             <div className="flex w-full justify-between items-start mt-8 gap-10">
               <p className="text-primary/50 text-lg leading-relaxed w-full">
-                We’ve been on both sides of the inspection table—enforcing
-                regulations, responding to incidents, and helping organizations
-                build systems that don’t just pass audits, but genuinely protect
-                people.
+                {/* At the intersection of "safety as imagined" and "safety as
+                done," we provide the strategic oversight and educational
+                expertise needed to build safer workplaces. Our goal is simple:
+                create practical, resilient systems that protect your team and
+                your bottom line. */}
+                Having been on both sides of the table, we understand regulatory
+                enforcement and the operational challenges of integrating
+                regulatory compliance into everyday work. This allows us to help
+                you build systems that satisfy regulators while remaining
+                functional.
               </p>
               <p className="text-lg text-primary/50 w-full">
+                {/* Our team doesn’t just comprise of Safety professionals but also
+                includes Human Resources (HR) professionals and our own in house
+                IT expertise, allowing us to integrate the human aspect, and
+                technology into our solutions. */}
                 Our team brings decades of regulatory expertise and industry
                 knowledge, paired with a relentless focus on improving how
                 workplace safety actually works.
@@ -60,6 +74,7 @@ export default function TeamSection() {
             </div>
           </div>
         </div>
+        {/* Team member spotlight */}
 
         <div className="space-y-20 mt-20">
           {highlights.map((item) => (
@@ -86,6 +101,71 @@ export default function TeamSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start  mt-16">
+          <div className="md:col-span-2 rounded-full overflow-hidden">
+            <Image
+              src={AndyLim}
+              alt="Member 1"
+              width={200}
+              height={200}
+              className="rounded-full"
+            />
+          </div>
+          <div className="md:col-span-9">
+            <h3 className="text-2xl font-semibold text-neutral-900">
+              Andrew Lim{" "}
+              <span className="text-sm text-neutral-600 font-normal">
+                MEd, PID, CRSP{" "}
+                <span className="text-xs text-neutral-400 font-normal">
+                  (Retired)
+                </span>
+              </span>
+            </h3>
+            <p className="mt-2 text-neutral-600 leading-relaxed">
+              With over 30 years of experience at WorkSafeBC, my career has
+              spanned roles from a Prevention Officer, providing consultation,
+              education and enforcement at workplaces to an Instructor and
+              Supervisor in Learning and Education Services, where I developed
+              and delivered the essential curriculum used to train both new and
+              tenured officers. This deep field experience is backed by a Master
+              of Education (MEd), a Provincial Instructor Diploma (PID), and a
+              Licentiateship of the City & Guilds of London, alongside a retired
+              CRSP status. Having served on the CSA Z1002-12 committee and
+              WorkSafeBC’s Corporate Health and Safety Committee.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mt-16">
+          <div className="md:col-span-2 rounded-full overflow-hidden">
+            <Image
+              src={SukhwantSingh}
+              alt="Member 1"
+              width={200}
+              height={200}
+              className="rounded-full"
+            />
+          </div>
+          <div className="md:col-span-9">
+            <h3 className="text-2xl font-semibold text-neutral-900">
+              Sukhwant Singh{" "}
+              <span className="text-sm text-neutral-600 font-normal">
+                PGDip, BSc, CRSP
+              </span>
+            </h3>
+            <p className="mt-2 text-neutral-600 leading-relaxed">
+              With over 25 years of safety and operational leadership, my career
+              spans diverse sectors including manufacturing, liquid waste,
+              transportation, and warehousing. My background includes managing
+              COR program certifications and serving as a Prevention Officer
+              with WorkSafeBC, where I specialized in workplace consultation,
+              education and enforcement, and new officers’ instruction and
+              mentoring. My field experience is supported by a Bachelor of
+              Science (BSc) in Engineering Management, a Post-Graduate Diploma
+              (PGDip) in Management Development, and my designation as a
+              Canadian Registered Safety Professional (CRSP).
+            </p>
+          </div>
         </div>
       </div>
     </section>

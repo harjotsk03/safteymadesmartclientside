@@ -10,7 +10,7 @@ export default function ValueProposition() {
       icon: Shield,
       title: "Expert-Led Guidance",
       description:
-        "Real-world regulatory experience from former WorkSafeBC officers who understand compliance from both sides.",
+        "Real-world regulatory experience from former prevention officers who understand compliance from both sides.",
       image: imageOne,
     },
     {
@@ -18,19 +18,19 @@ export default function ValueProposition() {
       title: "Technology-Driven Solutions",
       description:
         "Transform paper-based processes into streamlined digital workflows that save time and improve accuracy.",
-      image: imageTwo
+      image: imageTwo,
     },
     {
       icon: TrendingUp,
       title: "Proven Results",
       description:
         "Reduce incidents, simplify audits, and build a stronger safety culture with our comprehensive approach.",
-      image: imageThree
+      image: imageThree,
     },
   ];
 
   return (
-    <section className="w-full bg-white py-20 lg:py-28">
+    <section id="intro" className="w-full bg-white py-20 lg:py-16">
       <div className="px-6 lg:px-40">
         {/* Header */}
         <div className="flex flex-col justify-between items-start lg:items-start gap-6 mb-14">
@@ -39,15 +39,21 @@ export default function ValueProposition() {
               Where Regulatory Expertise Meets Innovation
             </h2>
           </div>
-          <div className="w-11/12">
+          <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
             <p className="text-lg text-primary font-normal leading-relaxed">
-              We're not just another safety consulting firm. Our team includes
-              former WorkSafeBC officers with{" "}
+              We help you bridge the gap between regulatory requirements and
+              operational reality. Our team comes from the field, having lived
+              the challenges of operational safety, before serving as WorkSafeBC
+              prevention officers and industry based safety leaders.
+            </p>
+            <p className="text-lg text-primary font-normal leading-relaxed">
+              This background means{" "}
               <span className="text-chart-1">
-                20+ years combined experience
-              </span>
-              , using insider knowledge to help you stay compliant and modernize
-              safety management.
+                we don&apos;t just identify hazards; we understand the
+                mechanical and human realities behind them.
+              </span>{" "}
+              We use our history in enforcement and industry to help you meet
+              the highest standards without compromising the flow of your work.
             </p>
           </div>
         </div>

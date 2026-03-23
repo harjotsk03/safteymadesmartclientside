@@ -25,7 +25,7 @@ export default function TechnologyPlatformSection() {
         "Incident reports",
         "Workplace inspections",
         "Safety observations",
-        "Fully customizable templates",
+        // "Fully customizable templates",
       ],
     },
     {
@@ -58,7 +58,7 @@ export default function TechnologyPlatformSection() {
       icon: Smartphone,
       points: [
         "Works on any device",
-        "Offline functionality",
+        // "Offline functionality",
         "Photo & signature capture",
         "Real-time sync across teams",
       ],

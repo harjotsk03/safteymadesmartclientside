@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import CenteredNavbar from "@/components/ui/custom/navbar";
+import { SmoothScrollProvider } from "@/components/ui/smooth-scroll";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <CenteredNavbar />
-        {children}
+        <SmoothScrollProvider>
+          <CenteredNavbar />
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );
