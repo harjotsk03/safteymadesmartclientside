@@ -132,16 +132,6 @@ export default function TechnologyPlatformSection() {
                 EIIR online reporting tool
               </Link>
             </li>
-            <li>
-              <Link
-                href="https://www.worksafebc.com/resources/health-safety/books-guides/safety-inspections-workbook?lang=en&direct"
-                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Safety inspections workbook (sample checklists)
-              </Link>
-            </li>
           </ul>
         </div>
 
