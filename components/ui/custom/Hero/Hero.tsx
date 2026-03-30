@@ -17,6 +17,11 @@ export default function Hero() {
             &ldquo;safety as done,&rdquo; building practical systems that
             protect your people and your operations.
           </p>
+          {/* <p className="mt-4 text-sm leading-relaxed text-black/55 lg:text-sm">
+            Whether you&apos;re building a Safety Management System from scratch
+            or strengthening parts of an existing program, we can tailor support
+            to your size, needs, and internal capacity.
+          </p> */}
 
           <div className="flex flex-col gap-4 pt-8 sm:flex-row sm:items-center sm:pt-10">
             <Button size="lg">Explore Our Services</Button>

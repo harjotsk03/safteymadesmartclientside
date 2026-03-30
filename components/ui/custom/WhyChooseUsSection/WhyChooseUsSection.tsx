@@ -7,7 +7,7 @@ export default function WhyChooseUsSection() {
       icon: ShieldCheck,
       title: "Regulatory Experience You Can Trust",
       description:
-        "Our team has enforced WorkSafe regulations firsthand. We understand how inspections really work and help you prepare with confidence—not guesswork.",
+        "Our team has firsthand experience in applying the Workers Compensation Act and the regulation. We understand how WorkSafeBC inspections really work and help you prepare with confidence—not guesswork.",
     },
     {
       icon: Target,
@@ -50,7 +50,7 @@ export default function WhyChooseUsSection() {
             const Icon = point.icon;
             return (
               <div key={index} className="flex gap-6 items-start group">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-chart-2/20 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-chart-3" />
                   </div>

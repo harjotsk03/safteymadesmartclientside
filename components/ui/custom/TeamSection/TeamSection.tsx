@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { ShieldCheck, HardHat, Cpu } from "lucide-react";
-import AndyLim from "../../../../assets/AndyLim.png";
+import AndyLim from "../../../../assets/AndrewLim.jpg";
 import SukhwantSingh from "../../../../assets/SukhwantSingh.jpeg";
 
 type Highlight = {
@@ -56,11 +56,11 @@ export default function TeamSection() {
                 expertise needed to build safer workplaces. Our goal is simple:
                 create practical, resilient systems that protect your team and
                 your bottom line. */}
-                Having been on both sides of the table, we understand regulatory
-                enforcement and the operational challenges of integrating
-                regulatory compliance into everyday work. This allows us to help
-                you build systems that satisfy regulators while remaining
-                functional.
+                Having been on both sides of the table, we understand many of
+                the challenges involved when integrating regulatory enforcement
+                and the operational needs into everyday work. This allows us to
+                help you build systems that will meet regulatory requirements
+                while remaining functional.
               </p>
               <p className="text-lg text-primary/50 w-full">
                 {/* Our team doesn’t just comprise of Safety professionals but also
@@ -103,13 +103,13 @@ export default function TeamSection() {
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start  mt-16">
-          <div className="md:col-span-2 rounded-full overflow-hidden">
+          <div className="md:col-span-2 rounded-full overflow-hidden aspect-square w-full max-w-[200px]">
             <Image
               src={AndyLim}
               alt="Member 1"
               width={200}
               height={200}
-              className="rounded-full"
+              className="rounded-full w-full h-full object-cover"
             />
           </div>
           <div className="md:col-span-9">
@@ -154,16 +154,17 @@ export default function TeamSection() {
               </span>
             </h3>
             <p className="mt-2 text-neutral-600 leading-relaxed">
-              With over 25 years of safety and operational leadership, my career
-              spans diverse sectors including manufacturing, liquid waste,
-              transportation, and warehousing. My background includes managing
-              COR program certifications and serving as a Prevention Officer
-              with WorkSafeBC, where I specialized in workplace consultation,
-              education and enforcement, and new officers’ instruction and
-              mentoring. My field experience is supported by a Bachelor of
-              Science (BSc) in Engineering Management, a Post-Graduate Diploma
-              (PGDip) in Management Development, and my designation as a
-              Canadian Registered Safety Professional (CRSP).
+              With over 25 years of safety and operational leadership, Suki's
+              career spans diverse sectors in the manufacturing, liquid waste,
+              transportation, and warehousing industries as well as the
+              management of COR (Certificate of Recognition) program
+              certifications. Suki's experience is augmented by his past role as
+              a Prevention Officer with WorkSafeBC, where he specialized in
+              workplace consultation, education and enforcement, and new officer
+              instruction and mentoring. Suki's credentials include a Bachelor
+              of Science (BSc) in Engineering Management, a Post-Graduate
+              Diploma (PGDip) in Management Development, and he holds a
+              designation as a Canadian Registered Safety Professional (CRSP).
             </p>
           </div>
         </div>

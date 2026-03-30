@@ -5,6 +5,7 @@ import {
   Smartphone,
   CheckCircle2,
 } from "lucide-react";
+import Link from "next/link";
 
 type Feature = {
   title: string;
@@ -66,7 +67,7 @@ export default function TechnologyPlatformSection() {
   ];
 
   return (
-        <section className="w-full bg-background py-20 lg:py-28">
+    <section className="w-full bg-background py-20 lg:py-28">
       <div className="px-6 lg:px-40">
         {/* Header */}
         <div className="max-w-3xl">
@@ -80,6 +81,68 @@ export default function TechnologyPlatformSection() {
             Say goodbye to paper forms, filing cabinets, and compliance chaos.
             Our digital platform transforms how you manage workplace safety.
           </p>
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-neutral-200 bg-white p-6 md:p-8">
+          <h3 className="text-lg font-semibold text-primary">
+            WorkSafeBC resources (always current)
+          </h3>
+          <p className="mt-2 text-sm text-neutral-600">
+            Use these official links for the latest requirements, forms, and
+            online reporting tools.
+          </p>
+          <ul className="mt-5 grid gap-3 md:grid-cols-2">
+            <li>
+              <Link
+                href="https://www.worksafebc.com/en/claims/report-workplace-injury-illness/how-employers-report-workplace-injury-illness"
+                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Employer reporting: how to report an injury/illness
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.worksafebc.com/en/health-safety/create-manage/incident-investigations/reporting-incidents-worksafebc"
+                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Incident investigations: reporting incidents to WorkSafeBC
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.worksafebc.com/en/resources/health-safety/forms/incident-investigation-report-form-52e40?lang=en"
+                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
+                target="_blank"
+                rel="noreferrer"
+              >
+                EIIR form (52E40): incident investigation report
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.worksafebc.com/resources/health-safety/forms/employer-incident-investigations-online-reporting-tool?lang=en"
+                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
+                target="_blank"
+                rel="noreferrer"
+              >
+                EIIR online reporting tool
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.worksafebc.com/resources/health-safety/books-guides/safety-inspections-workbook?lang=en&direct"
+                className="text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Safety inspections workbook (sample checklists)
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Feature Grid */}

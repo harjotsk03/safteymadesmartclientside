@@ -79,8 +79,8 @@ export default function ContactSection() {
                 Contact Us
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-                Any question or remarks? Just write us a message—we&apos;ll get
-                back to you as soon as we can.
+                Email, call, or use the form and we&apos;ll connect you with the
+                right support.
               </p>
             </div>
 
@@ -130,7 +130,8 @@ export default function ContactSection() {
                   Get in touch
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  You can reach us anytime
+                  Any queries or questions? Just send us a message—we&apos;ll
+                  get back to you as soon as we can.
                 </p>
               </div>
 
