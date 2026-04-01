@@ -123,16 +123,17 @@ export default function TeamSection() {
               </span>
             </h3>
             <p className="mt-2 text-neutral-600 leading-relaxed">
-              With over 30 years of experience at WorkSafeBC, my career has
-              spanned roles from a Prevention Officer, providing consultation,
+              With over 30 years of experience at WorkSafeBC, Andew's career has
+              spanned roles as a Prevention Officer, providing consultation,
               education and enforcement at workplaces to an Instructor and
-              Supervisor in Learning and Education Services, where I developed
-              and delivered the essential curriculum used to train both new and
-              tenured officers. This deep field experience is backed by a Master
-              of Education (MEd), a Provincial Instructor Diploma (PID), and a
-              Licentiateship of the City & Guilds of London, alongside a retired
-              CRSP status. Having served on the CSA Z1002-12 committee and
-              WorkSafeBC’s Corporate Health and Safety Committee.
+              Supervisor in Learning and Education Services. Andrew has
+              developed and delivered curriculum that has been used to train
+              both new and tenured officers. Andrew's years of field and
+              training experience is backed by a Master of Education (MEd), a
+              Provincial Instructor Diploma (PID), and a Licentiateship of the
+              City & Guilds of London. Andrew has a retired CRSP status. He has
+              also served on the CSA Z1002-12 committee and on WorkSafeBC’s
+              Corporate Health and Safety Committee.
             </p>
           </div>
         </div>

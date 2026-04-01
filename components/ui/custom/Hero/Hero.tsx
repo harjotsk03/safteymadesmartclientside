@@ -24,8 +24,21 @@ export default function Hero() {
           </p> */}
 
           <div className="flex flex-col gap-4 pt-8 sm:flex-row sm:items-center sm:pt-10">
-            <Button size="lg">Explore Our Services</Button>
-            <Button size="lg" variant="outline">
+            <Button
+              size="lg"
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Explore Our Services
+            </Button>
+            <Button
+              onClick={() => window.open("https://zbooking.ca/YCeFm", "_blank")}
+              size="lg"
+              variant="outline"
+            >
               Schedule a Consultation
             </Button>
           </div>

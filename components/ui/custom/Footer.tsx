@@ -25,32 +25,42 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               <a
-                href="#"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#services"
-                className="text-white/80 hover:text-white transition-colors"
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-white/80 hover:text-white transition-colors hover:cursor-pointer"
               >
                 Services
               </a>
               <a
-                href="#process"
-                className="text-white/80 hover:text-white transition-colors"
+                onClick={() =>
+                  document
+                    .getElementById("our-process")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-white/80 hover:text-white transition-colors hover:cursor-pointer"
               >
                 Our Process
               </a>
               <a
-                href="#team"
-                className="text-white/80 hover:text-white transition-colors"
+                onClick={() =>
+                  document
+                    .getElementById("our-team")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-white/80 hover:text-white transition-colors hover:cursor-pointer"
               >
                 Our Team
               </a>
               <a
-                href="#contact"
-                className="text-white/80 hover:text-white transition-colors"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-white/80 hover:text-white transition-colors hover:cursor-pointer"
               >
                 Contact
               </a>
