@@ -70,7 +70,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full px-6 py-16 lg:px-20 lg:py-16 lg:pl-32 lg:pr-32">
+    <section
+      id="contact"
+      className="w-full px-6 py-16 lg:px-20 lg:py-16 lg:pl-32 lg:pr-32"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-14 lg:flex-row lg:gap-16 xl:gap-20">
           <div className="min-w-0 flex-1 space-y-10 lg:max-w-xl xl:max-w-2xl">
@@ -95,14 +98,14 @@ export default function ContactSection() {
               </p>
               <p>
                 <a
-                  href="mailto:sukhwantsingh@safetymadesmart.com"
+                  href="mailto:info@safetymadesmart.com"
                   className="hover:text-chart-1 transition-colors"
                 >
-                  sukhwantsingh@safetymadesmart.com
+                  info@safetymadesmart.com
                 </a>
               </p>
               <Link
-                href="mailto:sukhwantsingh@safetymadesmart.com"
+                href="mailto:info@safetymadesmart.com"
                 className="inline-block pt-2 text-sm font-medium text-chart-1 underline underline-offset-4 hover:text-chart-1/80"
               >
                 Customer Support
@@ -180,21 +183,21 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="text-xs text-black">
-                      Phone number
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      autoComplete="tel"
-                      placeholder="Phone number"
+                  <label htmlFor="phone" className="text-xs text-black">
+                    Phone number
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    placeholder="Phone number"
                     className={inputBase}
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-xs text-black">
+                  <label htmlFor="message" className="text-xs text-black">
                     How can we help?
                   </label>
                   <div className="relative">

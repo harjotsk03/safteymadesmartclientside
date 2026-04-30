@@ -11,10 +11,16 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import Image from "next/image";
 import Logo from "../../../assets/logo.png";
 import { lenisScrollToId, useLenis } from "@/components/ui/smooth-scroll";
+import { useRouter } from "next/navigation";
 
 const navSections = [
   { label: "Services", id: "services", href: "/#services" },
@@ -25,6 +31,7 @@ const navSections = [
 function useInPageSectionNav() {
   const lenis = useLenis();
   const pathname = usePathname();
+  const router = useRouter();
 
   return React.useCallback(
     (
@@ -51,7 +58,7 @@ function useInPageSectionNav() {
 function MobileNav() {
   const [open, setOpen] = React.useState(false);
   const onSectionNav = useInPageSectionNav();
-
+  const router = useRouter();
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -60,7 +67,8 @@ function MobileNav() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-75 sm:w-100">
+      <SheetContent side="right" className="w-75 p-10 sm:w-100">
+        <SheetTitle className="sr-only">Navigation</SheetTitle>
         <nav className="flex flex-col gap-4">
           {navSections.map(({ label, id, href }) => (
             <Link
@@ -76,19 +84,11 @@ function MobileNav() {
             </Link>
           ))}
           <Button
-            asChild
             size="lg"
-            className="mt-4 w-full text-center [&_a]:justify-center"
+            className="mt-4 w-full"
+            onClick={() => router.push("/login")}
           >
-            <Link
-              href="/#contact"
-              onClick={(e) => {
-                onSectionNav(e, "contact", "/#contact");
-                setOpen(false);
-              }}
-            >
-              Get in Touch
-            </Link>
+            Log In
           </Button>
         </nav>
       </SheetContent>
@@ -102,6 +102,7 @@ export default function CenteredNavbar() {
   const onSectionNav = useInPageSectionNav();
   const lenis = useLenis();
   const pathname = usePathname();
+  const router = useRouter();
 
   const scrollHomeToTop = React.useCallback(() => {
     if (lenis) {
@@ -122,7 +123,7 @@ export default function CenteredNavbar() {
 
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b bg-background">
-      <div className="w-full flex h-20 items-center justify-between px-8">
+      <div className="w-full flex h-16 items-center justify-between px-8">
         <div className="flex items-center">
           <Link
             href="/"
@@ -131,8 +132,8 @@ export default function CenteredNavbar() {
           >
             <Image
               src={Logo}
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               alt="Safety Made Smart Logo"
             />
           </Link>
@@ -158,14 +159,7 @@ export default function CenteredNavbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button asChild>
-              <Link
-                href="/#contact"
-                onClick={(e) => onSectionNav(e, "contact", "/#contact")}
-              >
-                Get in Touch
-              </Link>
-            </Button>
+            <Button onClick={() => router.push("/login")}>Log In</Button>
           </div>
         </div>
 
